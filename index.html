@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIVI | Tech Baddie & Global Diplomat</title>
+    <meta name="description"
+        content="Personal portfolio of NIVI, a Frontend Developer, AI Builder, and Model United Nations Diplomat. Blending high-end tech systems with international strategy.">
+    <!-- Google Fonts: Playfair Display (Serif Elegance) & Inter (Clean Body Text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Core Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Custom Luxury Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <!-- ✦ Custom Rotating Sparkle Star Follower -->
+    <div class="custom-cursor-follower" id="custom-cursor-follower">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+        </svg>
+    </div>
+
+    <!-- Background Animated Visual Canvas/Grid -->
+    <div class="ambient-background">
+        <canvas id="ambient-canvas"></canvas>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="background-grid"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="logo-nivi">
+                <span>POOJITHA</span>
+                <span class="logo-dot">✦</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#capabilities" class="nav-link">Engineering Focus</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#experience" class="nav-link">My Journey</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <!-- Left Column: Bio, CTAs, Stats & Currently Building -->
+                <div class="hero-content">
+                    <div class="hero-greeting fade-in-element">
+                        <span>Hi, I'm</span>
+                        <span class="greeting-dot">✦</span>
+                    </div>
+
+                    <h1 class="hero-name-title fade-in-element">
+                        Poojitha<span class="highlight-pink">.</span>
+                    </h1>
+
+                    <div class="hero-bio-paragraphs fade-in-element">
+                        <p class="hero-bio-paragraph">
+                            Hello! I'm Poojitha, a Computer Science Engineering student at Dayananda Sagar Academy of Technology and Management, Bengaluru. I enjoy learning by building and exploring different areas of technology. Over the last few years, that curiosity has led me from AI and computer vision to full-stack development, robotics, and aerospace projects. Every experience has taught me something new, and that's what keeps me excited to take on the next challenge.
+                        </p>
+                        <p class="hero-bio-paragraph">
+                            When I'm not building projects, you'll probably find me preparing for a Model United Nations conference, reading up on a new topic, or attending technical events that spark new ideas. I genuinely enjoy the process of researching, understanding different perspectives, and meeting people who inspire me to think a little differently.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Avatar Stage & Floating Badges -->
+                <div class="hero-visual fade-in-element">
+                    <div class="avatar-stage">
+                        <!-- Decorative Orbit Rings & Glow -->
+                        <div class="avatar-orbit-ring ring-outer"></div>
+                        <div class="avatar-orbit-ring ring-inner"></div>
+                        <div class="avatar-glow"></div>
+
+                        <!-- Sparkles on orbit -->
+                        <span class="orbit-sparkle sp-1">✦</span>
+                        <span class="orbit-sparkle sp-2">✦</span>
+
+                        <!-- Main Portrait Circle -->
+                        <div class="avatar-circle">
+                            <img src="profile.jpeg" alt="Poojitha Pujari" class="hero-portrait-img">
+                        </div>
+
+                        <!-- Floating Achievement Badges -->
+                        <!-- Badge 1: Top Left - Best Delegate -->
+                        <div class="floating-badge badge-top-left float-anim-1">
+                            <div class="fb-icon">🏆</div>
+                            <div class="fb-text">
+                                <div class="fb-title">Best Delegate</div>
+                                <div class="fb-sub">MMCMUN Mysuru</div>
+                            </div>
+                        </div>
+
+                        <!-- Badge 2: Top Right - Published Patent -->
+                        <div class="floating-badge badge-top-right float-anim-2">
+                            <div class="fb-icon">📄</div>
+                            <div class="fb-text">
+                                <div class="fb-title">Published</div>
+                                <div class="fb-sub">Indian Patent</div>
+                            </div>
+                        </div>
+
+                        <!-- Badge 3: Mid Left - Robotics Explorer -->
+                        <div class="floating-badge badge-mid-left float-anim-3">
+                            <div class="fb-icon">🤖</div>
+                            <div class="fb-text">
+                                <div class="fb-title">Robotics</div>
+                                <div class="fb-sub">Explorer</div>
+                            </div>
+                        </div>
+
+                        <!-- Badge 4: Mid Right - CanSat 2026 -->
+                        <div class="floating-badge badge-mid-right float-anim-4">
+                            <div class="fb-icon">🚀</div>
+                            <div class="fb-text">
+                                <div class="fb-title">CanSat</div>
+                                <div class="fb-sub">2026</div>
+                            </div>
+                        </div>
+
+                        <!-- Badge 5: Bottom Center - AI Builder -->
+                        <div class="floating-badge badge-bottom-center float-anim-5">
+                            <div class="fb-icon">✨</div>
+                            <div class="fb-text">
+                                <div class="fb-title">AI Builder</div>
+                                <div class="fb-sub">Problem Solver</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <!-- Section Divider -->
+        <div class="section-divider-wrapper">
+            <div class="section-divider-line"></div>
+        </div>
+
+
+        <!-- Engineering Focus Section (Capabilities) -->
+        <section id="capabilities" class="section">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <span class="section-subtitle">Core Domains & Active Pursuits</span>
+                    <h2 class="section-title">Engineering Focus</h2>
+                </div>
+
+                <div class="capabilities-grid">
+                    <!-- Card 1: AI-Powered Intelligent Systems -->
+                    <div class="capability-card reveal-element">
+                        <div class="card-num">01</div>
+                        <h3 class="card-title">AI-Powered Intelligent Systems</h3>
+                        <p class="card-description">
+                            Engineering intelligent software that addresses genuine, real-world problems. I build
+                            applications leveraging LLMs, RAG pipelines, and autonomous AI agents—crafting systems that
+                            reason contextually rather than simply execute API calls.
+                        </p>
+                        <!-- Tech overlay on hover -->
+                        <div class="card-tech-overlay">
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">AI Agents</span>
+                            <span class="tech-tag">LLMs</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Computer Vision & Human-Centered AI -->
+                    <div class="capability-card reveal-element">
+                        <div class="card-num">02</div>
+                        <h3 class="card-title">Computer Vision & Human-Centered AI</h3>
+                        <p class="card-description">
+                            Building real-time vision systems grounded in pose estimation and biomechanical analysis. My
+                            focus is creating AI that serves human well-being—applying computer vision to healthcare and
+                            rehabilitation where intelligent systems have genuine impact.
+                        </p>
+                        <div class="card-tech-overlay">
+                            <span class="tech-tag">MediaPipe</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Full-Stack Software Engineering -->
+                    <div class="capability-card reveal-element">
+                        <div class="card-num">03</div>
+                        <h3 class="card-title">Full-Stack Software Engineering</h3>
+                        <p class="card-description">
+                            Designing complete software systems end-to-end—from secure authentication and RESTful APIs
+                            to responsive interfaces and real-time data flows. I prioritize reliability, clean
+                            architecture, and a user experience that feels effortless.
+                        </p>
+                        <div class="card-tech-overlay">
+                            <span class="tech-tag">React & Next.js</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: CanSat 2026 – Aerospace Communication Systems -->
+                    <div class="capability-card reveal-element">
+                        <div class="card-num">04</div>
+                        <h3 class="card-title">CanSat 2026 — Aerospace Communications</h3>
+                        <p class="card-description">
+                            Contributing to the Communication Subsystem of an interdisciplinary CanSat team. Having
+                            cleared the Preliminary Design Review and qualified for CDR, I am gaining hands-on exposure
+                            to embedded systems, aerospace engineering constraints, and collaborative systems design.
+                        </p>
+                        <div class="card-tech-overlay">
+                            <span class="tech-tag">Aerospace</span>
+                            <span class="tech-tag">Systems Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Humanoid Robotics & Intelligent Assistants -->
+                    <div class="capability-card reveal-element">
+                        <div class="card-num">05</div>
+                        <h3 class="card-title">Humanoid Robotics & Intelligent Assistants</h3>
+                        <p class="card-description">
+                            After completing a Humanoid Robotics Bootcamp and building a foundation in Linux and
+                            robotics workflows, I am currently developing AI-powered modules for a humanoid robot. Two
+                            upcoming projects — a Teaching Assistant Module and an HR Mock Interview Module — are in
+                            active development, merging intelligent conversation, human-robot interaction, and
+                            educational AI.
+                        </p>
+                        <div class="card-tech-overlay">
+                            <span class="tech-tag">Humanoid Robotics</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Human-Robot Interaction</span>
+                            <span class="tech-tag">Educational AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section Divider -->
+        <div class="section-divider-wrapper">
+            <div class="section-divider-line"></div>
+        </div>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <span class="section-subtitle">Selected Creations</span>
+                    <h2 class="section-title">Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: PhysioVision -->
+                    <article class="project-card reveal-element" id="project-physiovision"
+                        data-github="https://github.com/poojitha01-5/ai-physiotherapy-with-therapist-monitoring-.git"
+                        style="cursor:pointer;">
+                        <div class="project-image-wrapper">
+                            <div class="project-overlay"></div>
+                            <!-- Custom Vector Inline SVG Mockup -->
+                            <div class="project-svg-mockup bg-glow-1">
+                                <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="150" cy="100" r="50" stroke="rgba(255,179,209,0.08)" stroke-width="2" />
+                                    <path d="M100 100 H200" stroke="rgba(255,179,209,0.1)" stroke-width="1"
+                                        stroke-dasharray="4 4" />
+                                    <path d="M150 50 V150" stroke="rgba(255,179,209,0.1)" stroke-width="1"
+                                        stroke-dasharray="4 4" />
+                                    <!-- Stylized human eye/biometric -->
+                                    <path d="M90 100 C110 60, 190 60, 210 100 C190 140, 110 140, 90 100 Z"
+                                        stroke="#ffb3d1" stroke-width="1.5" />
+                                    <circle cx="150" cy="100" r="18" stroke="rgba(255,255,255,0.4)"
+                                        stroke-width="1.5" />
+                                    <circle class="scanner-dot" cx="150" cy="100" r="6" fill="#fff0f5" />
+                                    <!-- Tech graphs -->
+                                    <path d="M40 160 Q80 140 120 160 T200 130 T260 170" stroke="rgba(255,255,255,0.2)"
+                                        stroke-width="1" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">PhysioVision</h3>
+                            <p class="project-desc">
+                                Computer-vision driven physical rehabilitation platform offering instantaneous biometric
+                                analysis and kinetic angle computation.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">MediaPipe</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Tailwind</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="proj-link link-github" aria-label="PhysioVision GitHub"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>Code</span>
+                                    <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Crisis Info Navigator -->
+                    <article class="project-card reveal-element" id="project-crisisnavigator"
+                        data-github="https://github.com/poojitha01-5/Crisis-Info-Navigator.git" style="cursor:pointer;">
+                        <div class="project-image-wrapper">
+                            <div class="project-overlay"></div>
+                            <div class="project-svg-mockup bg-glow-2">
+                                <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="50" y="40" width="200" height="120" rx="4" stroke="rgba(255,179,209,0.08)"
+                                        stroke-width="1.5" />
+                                    <!-- Global map grid lines -->
+                                    <path d="M50 80 H250 M50 120 H250" stroke="rgba(255,179,209,0.04)"
+                                        stroke-width="1" />
+                                    <path d="M100 40 V160 M200 40 V160" stroke="rgba(255,179,209,0.04)"
+                                        stroke-width="1" />
+                                    <!-- Radar scanner pulse -->
+                                    <circle cx="150" cy="100" r="30" stroke="rgba(255,179,209,0.2)" stroke-width="1" />
+                                    <circle class="radar-ping" cx="150" cy="100" r="10" fill="#ffb3d1" opacity="0.6" />
+                                    <line x1="150" y1="100" x2="180" y2="70" stroke="#fff0f5" stroke-width="1.5" />
+                                    <!-- Info nodes -->
+                                    <circle cx="90" cy="70" r="3" fill="#ffb3d1" />
+                                    <circle cx="210" cy="130" r="4" fill="#fff0f5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Crisis Info Navigator</h3>
+                            <p class="project-desc">
+                                Real-time disaster mitigation router pulling geolocated social signals to orchestrate
+                                intelligent evacuation patterns during crises.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Mapbox</span>
+                                <span class="tag">GraphQL</span>
+                                <span class="tag">Socket.io</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="proj-link link-github" aria-label="Crisis Info Navigator GitHub"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>Code</span>
+                                    <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Smart Attend -->
+                    <article class="project-card reveal-element" id="project-smartattend"
+                        data-github="https://github.com/poojitha01-5/Smart-LostnFound-System-for-Campus.git"
+                        style="cursor:pointer;">
+                        <div class="project-image-wrapper">
+                            <div class="project-overlay"></div>
+                            <div class="project-svg-mockup bg-glow-3">
+                                <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Minimal calendar layout -->
+                                    <rect x="60" y="50" width="180" height="100" rx="6" stroke="rgba(255,179,209,0.08)"
+                                        stroke-width="1.5" fill="rgba(255,255,255,0.01)" />
+                                    <line x1="60" y1="75" x2="240" y2="75" stroke="rgba(255,179,209,0.08)"
+                                        stroke-width="1" />
+                                    <!-- Grid check marks -->
+                                    <circle cx="90" cy="100" r="8" fill="#ffb3d1" />
+                                    <path d="M86 100 L89 103 L94 98" stroke="#180e12" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="150" cy="100" r="8" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                    <circle cx="210" cy="100" r="8" fill="#fff0f5" />
+                                    <circle cx="90" cy="128" r="8" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                    <circle cx="150" cy="128" r="8" fill="#ffb3d1" />
+                                    <path d="M146 128 L149 131 L154 126" stroke="#180e12" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="210" cy="128" r="8" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+                                    <!-- User head circles -->
+                                    <circle cx="220" cy="62" r="6" fill="rgba(255,179,209,0.2)" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Smart Attend</h3>
+                            <p class="project-desc">
+                                Automated smart logging and student/employee attendance engine relying on touchless
+                                biometric identification and offline-first capabilities.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">SQLite</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Local Auth</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="proj-link link-github" aria-label="Smart Attend GitHub"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>Code</span>
+                                    <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: AI Security Dashboard -->
+                    <article class="project-card reveal-element" id="project-securitydashboard"
+                        data-github="https://github.com/Sagar44-Github/HackBaddies_prompt-guardian.git"
+                        style="cursor:pointer;">
+                        <div class="project-image-wrapper">
+                            <div class="project-overlay"></div>
+                            <div class="project-svg-mockup bg-glow-4">
+                                <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Shield grid -->
+                                    <path class="draw-shield"
+                                        d="M150 40 C170 40, 200 50, 200 90 C200 130, 150 160, 150 160 C150 160, 100 130, 100 90 C100 50, 130 40, 150 40 Z"
+                                        stroke="#ffb3d1" stroke-width="2" stroke-linejoin="round" />
+                                    <!-- Hexagonal security net -->
+                                    <path d="M125 70 H175 M112 90 H188 M115 110 H185" stroke="rgba(255,179,209,0.06)"
+                                        stroke-width="1.5" />
+                                    <circle class="secure-pulse" cx="150" cy="95" r="16"
+                                        fill="rgba(255,179,209,0.08)" />
+                                    <path d="M144 95 L148 99 L157 90" stroke="#fff0f5" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <!-- Side dashboard metrics -->
+                                    <line x1="40" y1="50" x2="80" y2="50" stroke="rgba(255,179,209,0.2)"
+                                        stroke-width="1.5" />
+                                    <line x1="40" y1="65" x2="70" y2="65" stroke="rgba(255,179,209,0.1)"
+                                        stroke-width="1" />
+                                    <line x1="220" y1="140" x2="260" y2="140" stroke="rgba(255,179,209,0.2)"
+                                        stroke-width="1.5" />
+                                    <line x1="220" y1="150" x2="250" y2="150" stroke="rgba(255,179,209,0.1)"
+                                        stroke-width="1" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">AI Security Dashboard</h3>
+                            <p class="project-desc">
+                                Defensive cyber threat detection system integrating NLP embeddings to proactively flag
+                                packet anomalies and anomalous shell scripts.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Chart.js</span>
+                                <span class="tag">Transformers</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="proj-link link-github" aria-label="AI Security Dashboard GitHub"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>Code</span>
+                                    <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section Divider -->
+        <div class="section-divider-wrapper">
+            <div class="section-divider-line"></div>
+        </div>
+
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <span class="section-subtitle">Recognition & Milestones</span>
+                    <h2 class="section-title">Achievements</h2>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Indian Patent -->
+                    <div class="achievement-card reveal-element">
+                        <div class="achievement-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="achievement-title">Published Indian Patent</h3>
+                        <p class="achievement-desc">
+                            Published Indian Patent for "An AI-Powered Smart Rainwater Harvesting and Reuse System" (Publication No. IN202644043693 A1, 2026).
+                        </p>
+                    </div>
+
+                    <!-- GfG Codeathon -->
+                    <div class="achievement-card reveal-element">
+                        <div class="achievement-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none">
+                                <path d="M12 20V10M18 20V4M6 20v-4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="achievement-title">GeeksforGeeks Codeathon</h3>
+                        <p class="achievement-desc">
+                            Ranked 48th among 161 participants in the GeeksforGeeks Codeathon.
+                        </p>
+                    </div>
+
+                    <!-- Kaggle Course -->
+                    <div class="achievement-card reveal-element">
+                        <div class="achievement-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6 12v5c3.333 1.667 8.667 1.667 12 0v-5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="achievement-title">Kaggle × Google AI Course</h3>
+                        <p class="achievement-desc">
+                            Successfully completed the Kaggle × Google 5-Day AI Agents Intensive Course.
+                        </p>
+                    </div>
+
+                    <!-- Best Delegate MMCMUN -->
+                    <div class="achievement-card reveal-element">
+                        <div class="achievement-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="achievement-title">Best Delegate – MMCMUN</h3>
+                        <p class="achievement-desc">
+                            Awarded the Best Delegate at MMCMUN, Mysuru, 2026.
+                        </p>
+                    </div>
+
+                    <!-- Special Mention LITMUN -->
+                    <div class="achievement-card reveal-element">
+                        <div class="achievement-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none">
+                                <circle cx="12" cy="8" r="6" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.56 13.89L7 23l5-3 5 3-1.56-9.11" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="achievement-title">Special Mention – LITMUN</h3>
+                        <p class="achievement-desc">
+                            Received the Special Mention Award (3rd Place) at LITMUN, Bengaluru, 2026.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section Divider -->
+        <div class="section-divider-wrapper">
+            <div class="section-divider-line"></div>
+        </div>
+
+
+        <!-- My Journey Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header reveal-element">
+                    <span class="section-subtitle">Milestones & Growth</span>
+                    <h2 class="section-title">My Journey</h2>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line">
+                        <div class="timeline-progress"></div>
+                    </div>
+
+                    <!-- Milestone 1 -->
+                    <div class="timeline-item left reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">September 2024</div>
+                            <h3 class="timeline-role">Started B.E. in Computer Science & Engineering</h3>
+                            <p class="timeline-description">Started my Computer Science journey at Dayananda Sagar Academy of Technology and Management.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-item right reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">October 2024</div>
+                            <h3 class="timeline-role">Dance Crew & MUN Journey</h3>
+                            <p class="timeline-description">Joined the college dance crew while beginning my journey in Model United Nations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="timeline-item left reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">March – April 2025</div>
+                            <h3 class="timeline-role">First & Second Model United Nations</h3>
+                            <p class="timeline-description">Participated in my first two MUN conferences, strengthening diplomacy, research, and public speaking.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="timeline-item right reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">December 2025</div>
+                            <h3 class="timeline-role">Codeathon & Crisis Info Navigator</h3>
+                            <p class="timeline-description">Secured 48th Rank among 161 participants and built an AI disaster preparedness platform during the Kaggle × Google AI Agents Intensive Course.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 5 -->
+                    <div class="timeline-item left reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">January – April 2026</div>
+                            <h3 class="timeline-role">Software, Math Club, Robotics & Security</h3>
+                            <p class="timeline-description">Developed secure software systems, joined the Mathematics Club Core Team, completed a Humanoid Robotics Bootcamp, and built an AI prompt injection firewall.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 6 -->
+                    <div class="timeline-item right reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">May 2026</div>
+                            <h3 class="timeline-role">LITMUN Special Mention & MMCMUN Best Delegate</h3>
+                            <p class="timeline-description">Received Special Mention (3rd Place) at LITMUN and Best Delegate at MMCMUN.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 7 -->
+                    <div class="timeline-item left reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2026</div>
+                            <h3 class="timeline-role">Published Indian Patent</h3>
+                            <p class="timeline-description">Published an Indian Patent for an AI-powered Smart Rainwater Harvesting and Reuse System.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 8 -->
+                    <div class="timeline-item right reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">July – August 2026</div>
+                            <h3 class="timeline-role">PhysioVision</h3>
+                            <p class="timeline-description">Built an AI-powered physiotherapy platform using computer vision and artificial intelligence.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 9 -->
+                    <div class="timeline-item left reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2026 – Present</div>
+                            <h3 class="timeline-role">Brain Mine Club Head & CanSat 2026</h3>
+                            <p class="timeline-description">Became Club Head while contributing to the Communication Subsystem of CanSat 2026. Our team successfully cleared PDR and is currently working toward CDR.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 10 -->
+                    <div class="timeline-item right reveal-element">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Upcoming</div>
+                            <h3 class="timeline-role">Humanoid Robotics Projects</h3>
+                            <p class="timeline-description">Preparing to develop AI-powered Teaching Assistant and HR Mock Interview modules for a humanoid robot.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section Divider -->
+        <div class="section-divider-wrapper">
+            <div class="section-divider-line"></div>
+        </div>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container contact-container">
+
+
+                <div class="contact-body reveal-element">
+                    <div class="contact-links-wrapper">
+                        <!-- LinkedIn Link -->
+                        <a href="https://linkedin.com/in/pujaripoojitha" target="_blank" rel="noopener noreferrer" class="contact-icon-card" id="contact-linkedin" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="34" height="34" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span class="contact-card-label">LinkedIn</span>
+                        </a>
+
+                        <!-- GitHub Link -->
+                        <a href="https://github.com/poojitha01-5" target="_blank" rel="noopener noreferrer" class="contact-icon-card" id="contact-github" title="GitHub">
+                            <svg viewBox="0 0 24 24" width="34" height="34" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            <span class="contact-card-label">GitHub</span>
+                        </a>
+
+                        <!-- Mail Link -->
+                        <a href="mailto:poojithapujari20@gmail.com" class="contact-icon-card" id="contact-email" title="Email">
+                            <svg viewBox="0 0 24 24" width="34" height="34" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span class="contact-card-label">Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Centered Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <blockquote class="footer-quote reveal-element">
+                “Thank you for stopping by — every great journey starts with a single click.”
+            </blockquote>
+            <div class="footer-divider"></div>
+            <div class="footer-details">
+                <p class="footer-copy">&copy; 2026 POOJITHA. Crafted with passion &amp; precision.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="script.js"></script>
+
+    <!-- Project Card Click Handler -->
+    <script>
+        document.querySelectorAll('.project-card[data-github]').forEach(function (card) {
+            card.addEventListener('click', function (e) {
+                // If the click came from the Code button or its children, let the anchor handle it natively
+                if (e.target.closest('.proj-link')) return;
+                var url = card.getAttribute('data-github');
+                if (url && url !== '#') {
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                }
+            });
+
+            // Keep Code button href in sync with data-github
+            var codeBtn = card.querySelector('.link-github');
+            if (codeBtn) {
+                var url = card.getAttribute('data-github');
+                codeBtn.href = url || '#';
+            }
+        });
+    </script>
+</body>
+
+</html>
